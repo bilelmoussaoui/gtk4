@@ -330,7 +330,6 @@ pub fn init_check() -> bool {
 }
 
 pub fn is_initialized() -> bool {
-    assert_initialized_main_thread!();
     unsafe { from_glib(gtk_sys::gtk_is_initialized()) }
 }
 
